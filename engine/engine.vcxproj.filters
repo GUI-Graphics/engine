@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\window">
+      <UniqueIdentifier>{95f20b52-6afc-4c27-98b5-ae703dcc3fcb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\window">
+      <UniqueIdentifier>{4b68d59d-8348-45df-a7a9-f5f70d9bbe41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\math">
+      <UniqueIdentifier>{2044595f-475b-4357-a2ea-729eba5bbcd8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\math">
+      <UniqueIdentifier>{bcacd28b-210c-4be5-89c9-a4746f58357c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\core">
+      <UniqueIdentifier>{67a43717-e8d7-4b27-9c86-f4842e27f1e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\core">
+      <UniqueIdentifier>{957f94f0-f48c-4b91-8037-0ba10edefec5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\camera">
+      <UniqueIdentifier>{6154517c-c452-431d-b092-e6fd34bbd47b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\camera">
+      <UniqueIdentifier>{f061f9ef-001c-4aa2-9c8e-317b8f872ec1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\controls">
+      <UniqueIdentifier>{b10ab4cd-6d29-460d-9ea5-053d51e6f3bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\controls">
+      <UniqueIdentifier>{2a7cdd26-c952-41d3-aaf8-a59c581b621b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\renderer">
+      <UniqueIdentifier>{04423de2-ca28-4080-a7de-4eef8d739260}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\renderer">
+      <UniqueIdentifier>{5546efad-b776-4e29-a150-80ca38aef2ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\extras">
+      <UniqueIdentifier>{687b7834-e473-4413-8f72-912ed4f23055}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\extras\geometries">
+      <UniqueIdentifier>{7f83d6e9-a105-47ed-959c-510ad8270246}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\extras">
+      <UniqueIdentifier>{e5625323-6fc3-4017-a2f8-bb6d12f8751d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\extras\geometries">
+      <UniqueIdentifier>{36e78d07-9030-45c2-9aec-f159d00250b3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\window\Window.h">
+      <Filter>Header Files\window</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\window\Event.h">
+      <Filter>Header Files\window</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\engine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\window\EventHandler.h">
+      <Filter>Header Files\window</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\window\EventTarget.h">
+      <Filter>Header Files\window</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\math\Color.h">
+      <Filter>Header Files\math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\math\Math.h">
+      <Filter>Header Files\math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\math\Matrix3.h">
+      <Filter>Header Files\math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\math\Matrix4.h">
+      <Filter>Header Files\math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\math\Vector2.h">
+      <Filter>Header Files\math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\math\Vector3.h">
+      <Filter>Header Files\math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\core\Object3D.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\core\BufferAttribute.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\core\BufferGeometry.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\camera\Camera.h">
+      <Filter>Header Files\camera</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\camera\PerspectiveCamera.h">
+      <Filter>Header Files\camera</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\controls\OrbitControl.h">
+      <Filter>Header Files\controls</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\window\Callback.h">
+      <Filter>Header Files\window</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\renderer\GLProgram.h">
+      <Filter>Header Files\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\renderer\GLShader.h">
+      <Filter>Header Files\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\renderer\GLRenderer.h">
+      <Filter>Header Files\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\extras\geometries\BoxBufferGeometry.h">
+      <Filter>Header Files\extras\geometries</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\extras\geometries\Mesh.h">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\extras\geometries\SphereBufferGeometry.h">
+      <Filter>Header Files\extras\geometries</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\extras\geometries\PlaneBufferGeometry.h">
+      <Filter>Header Files\extras\geometries</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\window\Window.cpp">
+      <Filter>Source Files\window</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\window\Event.cpp">
+      <Filter>Source Files\window</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\math\Math.cpp">
+      <Filter>Source Files\math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\math\Matrix3.cpp">
+      <Filter>Source Files\math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\math\Matrix4.cpp">
+      <Filter>Source Files\math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\core\Object3D.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\camera\Camera.cpp">
+      <Filter>Source Files\camera</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\controls\OrbitControl.cpp">
+      <Filter>Source Files\controls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\renderer\GLShader.cpp">
+      <Filter>Source Files\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\renderer\GLProgram.cpp">
+      <Filter>Source Files\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\renderer\GLRenderer.cpp">
+      <Filter>Source Files\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\extras\geometries\BoxBufferGeometry.cpp">
+      <Filter>Source Files\extras\geometries</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\extras\geometries\SphereBufferGeometry.cpp">
+      <Filter>Source Files\extras\geometries</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\extras\geometries\PlaneBufferGeometry.cpp">
+      <Filter>Source Files\extras\geometries</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
