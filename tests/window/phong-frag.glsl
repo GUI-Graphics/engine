@@ -15,8 +15,8 @@ void main()
 	float dc = max(dot(lightDir, vNormal), 0.0f);
 
 	vec3 viewDir = normalize(cameraPosition - vPosition);
-	vec3 reflectDir = reflect(-lightDir, vNormal);
-	float sc = pow(max(dot(viewDir, reflectDir), 0.0f), 32);
+	vec3 reflectDir = reflect(lightDir, vNormal);
+	float sc = 0;
 
-	outColor = vec4((0.2f + dc + sc)) * diffuse;
+	outColor = vec4((0.2f + dc * 0.7)) * diffuse + sc * vec4(1.0f, 1.0f, 1.0f, 1.0f);
 }

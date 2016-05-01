@@ -10,3 +10,11 @@
 #include <extras\geometries\BoxBufferGeometry.h>
 #include <extras\geometries\SphereBufferGeometry.h>
 #include <extras\geometries\PlaneBufferGeometry.h>
+
+#define MAKE_PROGRAM(program, vertex, fragment)		\
+	GLShader vert(GL_VERTEX_SHADER);				\
+	GLShader frag(GL_FRAGMENT_SHADER);				\
+	vert.fromFile(vertex);							\
+	frag.fromFile(fragment);						\
+	GLProgram program(vert, frag);					\
+	program.compile()
