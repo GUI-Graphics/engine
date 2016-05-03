@@ -61,6 +61,12 @@
     <Filter Include="Source Files\extras\geometries">
       <UniqueIdentifier>{36e78d07-9030-45c2-9aec-f159d00250b3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\extras\helpers">
+      <UniqueIdentifier>{8e66647a-81ec-42af-b25d-e593e7c3d310}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\extras\helpers">
+      <UniqueIdentifier>{11308aa1-517b-44a6-926e-2f65544ea088}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\window\Window.h">
@@ -138,6 +144,12 @@
     <ClInclude Include="..\include\extras\geometries\PlaneBufferGeometry.h">
       <Filter>Header Files\extras\geometries</Filter>
     </ClInclude>
+    <ClInclude Include="..\include\extras\helpers\BoxHelper.h">
+      <Filter>Header Files\extras\helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\extras\helpers\GridHelper.h">
+      <Filter>Header Files\extras\helpers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\window\Window.cpp">
@@ -181,6 +193,9 @@
     </ClCompile>
     <ClCompile Include="..\src\extras\geometries\PlaneBufferGeometry.cpp">
       <Filter>Source Files\extras\geometries</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\extras\helpers\GridHelper.cpp">
+      <Filter>Source Files\extras\helpers</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

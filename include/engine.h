@@ -10,6 +10,8 @@
 #include <extras\geometries\BoxBufferGeometry.h>
 #include <extras\geometries\SphereBufferGeometry.h>
 #include <extras\geometries\PlaneBufferGeometry.h>
+#include <extras\helpers\BoxHelper.h>
+#include <extras\helpers\GridHelper.h>
 
 #define MAKE_PROGRAM(program, vertex, fragment)		\
 	GLShader vert(GL_VERTEX_SHADER);				\

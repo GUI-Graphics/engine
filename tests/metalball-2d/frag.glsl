@@ -40,4 +40,11 @@ void main()
 		outColor = vec4(1, 1, 1, 1);
 	}
 
+	if(withinCircle(gl_FragCoord.xy, center1) ||
+	   withinCircle(gl_FragCoord.xy, center2) ||
+	   withinCircle(gl_FragCoord.xy, center3) || 
+	   withinCircle(gl_FragCoord.xy, center4))
+	{
+		outColor = vec4(1, 0, 0, 1);
+	}
 }
