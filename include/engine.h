@@ -12,6 +12,7 @@
 #include <extras\geometries\PlaneBufferGeometry.h>
 #include <extras\helpers\BoxHelper.h>
 #include <extras\helpers\GridHelper.h>
+#include <extras\helpers\MarchingCube.h>
 
 #define MAKE_PROGRAM(program, vertex, fragment)		\
 	GLShader vert(GL_VERTEX_SHADER);				\
