@@ -150,6 +150,9 @@
     <ClInclude Include="..\include\extras\helpers\GridHelper.h">
       <Filter>Header Files\extras\helpers</Filter>
     </ClInclude>
+    <ClInclude Include="..\include\extras\helpers\MarchingCube.h">
+      <Filter>Header Files\extras\helpers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\window\Window.cpp">
@@ -195,6 +198,9 @@
       <Filter>Source Files\extras\geometries</Filter>
     </ClCompile>
     <ClCompile Include="..\src\extras\helpers\GridHelper.cpp">
+      <Filter>Source Files\extras\helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\extras\helpers\MarchingCube.cpp">
       <Filter>Source Files\extras\helpers</Filter>
     </ClCompile>
   </ItemGroup>

@@ -126,6 +126,7 @@
     <ClInclude Include="..\include\extras\geometries\SphereBufferGeometry.h" />
     <ClInclude Include="..\include\extras\helpers\BoxHelper.h" />
     <ClInclude Include="..\include\extras\helpers\GridHelper.h" />
+    <ClInclude Include="..\include\extras\helpers\MarchingCube.h" />
     <ClInclude Include="..\include\math\Color.h" />
     <ClInclude Include="..\include\math\Math.h" />
     <ClInclude Include="..\include\math\Matrix3.h" />
@@ -150,6 +151,7 @@
     <ClCompile Include="..\src\extras\geometries\PlaneBufferGeometry.cpp" />
     <ClCompile Include="..\src\extras\geometries\SphereBufferGeometry.cpp" />
     <ClCompile Include="..\src\extras\helpers\GridHelper.cpp" />
+    <ClCompile Include="..\src\extras\helpers\MarchingCube.cpp" />
     <ClCompile Include="..\src\math\Math.cpp" />
     <ClCompile Include="..\src\math\Matrix3.cpp" />
     <ClCompile Include="..\src\math\Matrix4.cpp" />
