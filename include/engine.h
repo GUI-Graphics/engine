@@ -10,6 +10,7 @@
 #include <extras\geometries\BoxBufferGeometry.h>
 #include <extras\geometries\SphereBufferGeometry.h>
 #include <extras\geometries\PlaneBufferGeometry.h>
+#include <extras\geometries\TorusBufferGeometry.h>
 #include <extras\helpers\BoxHelper.h>
 #include <extras\helpers\GridHelper.h>
 #include <extras\helpers\MarchingCube.h>

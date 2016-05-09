@@ -13,6 +13,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "metalball-2d", "tests\metal
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "metalball-3d", "tests\metalball-3d\metalball-3d.vcxproj", "{DF85D22B-9E7D-4A44-A093-AEC8FE37287F}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "torus", "tests\torus\torus.vcxproj", "{F5758022-084F-48A6-B952-47728E3D2EF8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -53,6 +55,14 @@ Global
 		{DF85D22B-9E7D-4A44-A093-AEC8FE37287F}.Release|x64.Build.0 = Release|x64
 		{DF85D22B-9E7D-4A44-A093-AEC8FE37287F}.Release|x86.ActiveCfg = Release|Win32
 		{DF85D22B-9E7D-4A44-A093-AEC8FE37287F}.Release|x86.Build.0 = Release|Win32
+		{F5758022-084F-48A6-B952-47728E3D2EF8}.Debug|x64.ActiveCfg = Debug|x64
+		{F5758022-084F-48A6-B952-47728E3D2EF8}.Debug|x64.Build.0 = Debug|x64
+		{F5758022-084F-48A6-B952-47728E3D2EF8}.Debug|x86.ActiveCfg = Debug|Win32
+		{F5758022-084F-48A6-B952-47728E3D2EF8}.Debug|x86.Build.0 = Debug|Win32
+		{F5758022-084F-48A6-B952-47728E3D2EF8}.Release|x64.ActiveCfg = Release|x64
+		{F5758022-084F-48A6-B952-47728E3D2EF8}.Release|x64.Build.0 = Release|x64
+		{F5758022-084F-48A6-B952-47728E3D2EF8}.Release|x86.ActiveCfg = Release|Win32
+		{F5758022-084F-48A6-B952-47728E3D2EF8}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -61,5 +71,6 @@ Global
 		{58D50E8C-D175-4ED9-947D-4B86E8A73011} = {30F386CF-00A1-4855-AD93-299ED0E6538C}
 		{8D11DCCE-AD2B-4251-BC6A-EB78CA3AB228} = {30F386CF-00A1-4855-AD93-299ED0E6538C}
 		{DF85D22B-9E7D-4A44-A093-AEC8FE37287F} = {30F386CF-00A1-4855-AD93-299ED0E6538C}
+		{F5758022-084F-48A6-B952-47728E3D2EF8} = {30F386CF-00A1-4855-AD93-299ED0E6538C}
 	EndGlobalSection
 EndGlobal
