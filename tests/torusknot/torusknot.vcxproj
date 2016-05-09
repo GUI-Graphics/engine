@@ -19,8 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{F61182BB-E53F-49A2-8797-9F1261FDF2E3}</ProjectGuid>
-    <RootNamespace>engine</RootNamespace>
+    <ProjectGuid>{4BA372D2-E657-470B-A36A-90AA613B8D13}</ProjectGuid>
+    <RootNamespace>torusknot</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -44,7 +44,7 @@
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v140</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
@@ -57,19 +57,23 @@
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\deps\deps.props" />
+    <Import Project="..\..\deps\deps.props" />
+    <Import Project="..\..\deps\engine.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\deps\deps.props" />
+    <Import Project="..\..\deps\deps.props" />
+    <Import Project="..\..\deps\engine.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\deps\deps.props" />
+    <Import Project="..\..\deps\deps.props" />
+    <Import Project="..\..\deps\engine.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\deps\deps.props" />
+    <Import Project="..\..\deps\deps.props" />
+    <Import Project="..\..\deps\engine.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup />
@@ -114,56 +118,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\include\camera\Camera.h" />
-    <ClInclude Include="..\include\camera\PerspectiveCamera.h" />
-    <ClInclude Include="..\include\controls\OrbitControl.h" />
-    <ClInclude Include="..\include\core\BufferAttribute.h" />
-    <ClInclude Include="..\include\core\BufferGeometry.h" />
-    <ClInclude Include="..\include\core\Object3D.h" />
-    <ClInclude Include="..\include\engine.h" />
-    <ClInclude Include="..\include\extras\geometries\BoxBufferGeometry.h" />
-    <ClInclude Include="..\include\extras\geometries\PlaneBufferGeometry.h" />
-    <ClInclude Include="..\include\extras\geometries\SphereBufferGeometry.h" />
-    <ClInclude Include="..\include\extras\geometries\TorusBufferGeometry.h" />
-    <ClInclude Include="..\include\extras\geometries\TorusKnotBufferGeometry.h" />
-    <ClInclude Include="..\include\extras\helpers\BoxHelper.h" />
-    <ClInclude Include="..\include\extras\helpers\GridHelper.h" />
-    <ClInclude Include="..\include\extras\helpers\MarchingCube.h" />
-    <ClInclude Include="..\include\math\Color.h" />
-    <ClInclude Include="..\include\math\Math.h" />
-    <ClInclude Include="..\include\math\Matrix3.h" />
-    <ClInclude Include="..\include\math\Matrix4.h" />
-    <ClInclude Include="..\include\math\Vector2.h" />
-    <ClInclude Include="..\include\math\Vector3.h" />
-    <ClInclude Include="..\include\renderer\GLProgram.h" />
-    <ClInclude Include="..\include\renderer\GLRenderer.h" />
-    <ClInclude Include="..\include\renderer\GLShader.h" />
-    <ClInclude Include="..\include\window\Event.h" />
-    <ClInclude Include="..\include\window\Callback.h" />
-    <ClInclude Include="..\include\window\EventHandler.h" />
-    <ClInclude Include="..\include\window\EventTarget.h" />
-    <ClInclude Include="..\include\window\Window.h" />
-    <ClInclude Include="..\src\extras\geometries\Mesh.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\src\camera\Camera.cpp" />
-    <ClCompile Include="..\src\controls\OrbitControl.cpp" />
-    <ClCompile Include="..\src\core\Object3D.cpp" />
-    <ClCompile Include="..\src\extras\geometries\BoxBufferGeometry.cpp" />
-    <ClCompile Include="..\src\extras\geometries\PlaneBufferGeometry.cpp" />
-    <ClCompile Include="..\src\extras\geometries\SphereBufferGeometry.cpp" />
-    <ClCompile Include="..\src\extras\geometries\TorusBufferGeometry.cpp" />
-    <ClCompile Include="..\src\extras\geometries\TorusKnotBufferGeometry.cpp" />
-    <ClCompile Include="..\src\extras\helpers\GridHelper.cpp" />
-    <ClCompile Include="..\src\extras\helpers\MarchingCube.cpp" />
-    <ClCompile Include="..\src\math\Math.cpp" />
-    <ClCompile Include="..\src\math\Matrix3.cpp" />
-    <ClCompile Include="..\src\math\Matrix4.cpp" />
-    <ClCompile Include="..\src\renderer\GLProgram.cpp" />
-    <ClCompile Include="..\src\renderer\GLRenderer.cpp" />
-    <ClCompile Include="..\src\renderer\GLShader.cpp" />
-    <ClCompile Include="..\src\window\Event.cpp" />
-    <ClCompile Include="..\src\window\Window.cpp" />
+    <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -156,6 +156,9 @@
     <ClInclude Include="..\include\extras\geometries\TorusBufferGeometry.h">
       <Filter>Header Files\extras\geometries</Filter>
     </ClInclude>
+    <ClInclude Include="..\include\extras\geometries\TorusKnotBufferGeometry.h">
+      <Filter>Header Files\extras\geometries</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\window\Window.cpp">
@@ -207,6 +210,9 @@
       <Filter>Source Files\extras\helpers</Filter>
     </ClCompile>
     <ClCompile Include="..\src\extras\geometries\TorusBufferGeometry.cpp">
+      <Filter>Source Files\extras\geometries</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\extras\geometries\TorusKnotBufferGeometry.cpp">
       <Filter>Source Files\extras\geometries</Filter>
     </ClCompile>
   </ItemGroup>
