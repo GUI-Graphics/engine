@@ -23,7 +23,7 @@ const char* frag =
 
 int main()
 {
-	Window window("MataBall", 1366, 768);
+	Window window;
 
 	GLShader gridVert(GL_VERTEX_SHADER);
 	gridVert.fromStr(vert);

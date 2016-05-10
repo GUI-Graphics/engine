@@ -17,6 +17,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "torus", "tests\torus\torus.
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "torusknot", "tests\torusknot\torusknot.vcxproj", "{4BA372D2-E657-470B-A36A-90AA613B8D13}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "simple-texture", "tests\simple-texture\simple-texture.vcxproj", "{F2D6FC8A-8927-4644-B639-08780ADED2BF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -73,6 +75,14 @@ Global
 		{4BA372D2-E657-470B-A36A-90AA613B8D13}.Release|x64.Build.0 = Release|x64
 		{4BA372D2-E657-470B-A36A-90AA613B8D13}.Release|x86.ActiveCfg = Release|Win32
 		{4BA372D2-E657-470B-A36A-90AA613B8D13}.Release|x86.Build.0 = Release|Win32
+		{F2D6FC8A-8927-4644-B639-08780ADED2BF}.Debug|x64.ActiveCfg = Debug|x64
+		{F2D6FC8A-8927-4644-B639-08780ADED2BF}.Debug|x64.Build.0 = Debug|x64
+		{F2D6FC8A-8927-4644-B639-08780ADED2BF}.Debug|x86.ActiveCfg = Debug|Win32
+		{F2D6FC8A-8927-4644-B639-08780ADED2BF}.Debug|x86.Build.0 = Debug|Win32
+		{F2D6FC8A-8927-4644-B639-08780ADED2BF}.Release|x64.ActiveCfg = Release|x64
+		{F2D6FC8A-8927-4644-B639-08780ADED2BF}.Release|x64.Build.0 = Release|x64
+		{F2D6FC8A-8927-4644-B639-08780ADED2BF}.Release|x86.ActiveCfg = Release|Win32
+		{F2D6FC8A-8927-4644-B639-08780ADED2BF}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -83,5 +93,6 @@ Global
 		{DF85D22B-9E7D-4A44-A093-AEC8FE37287F} = {30F386CF-00A1-4855-AD93-299ED0E6538C}
 		{F5758022-084F-48A6-B952-47728E3D2EF8} = {30F386CF-00A1-4855-AD93-299ED0E6538C}
 		{4BA372D2-E657-470B-A36A-90AA613B8D13} = {30F386CF-00A1-4855-AD93-299ED0E6538C}
+		{F2D6FC8A-8927-4644-B639-08780ADED2BF} = {30F386CF-00A1-4855-AD93-299ED0E6538C}
 	EndGlobalSection
 EndGlobal
