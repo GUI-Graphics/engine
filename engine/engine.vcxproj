@@ -138,6 +138,7 @@
     <ClInclude Include="..\include\renderer\GLProgram.h" />
     <ClInclude Include="..\include\renderer\GLRenderer.h" />
     <ClInclude Include="..\include\renderer\GLShader.h" />
+    <ClInclude Include="..\include\textures\Texture.h" />
     <ClInclude Include="..\include\window\Event.h" />
     <ClInclude Include="..\include\window\Callback.h" />
     <ClInclude Include="..\include\window\EventHandler.h" />
@@ -162,6 +163,7 @@
     <ClCompile Include="..\src\renderer\GLProgram.cpp" />
     <ClCompile Include="..\src\renderer\GLRenderer.cpp" />
     <ClCompile Include="..\src\renderer\GLShader.cpp" />
+    <ClCompile Include="..\src\textures\Texture.cpp" />
     <ClCompile Include="..\src\window\Event.cpp" />
     <ClCompile Include="..\src\window\Window.cpp" />
   </ItemGroup>

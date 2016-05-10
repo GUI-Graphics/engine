@@ -7,7 +7,11 @@ namespace engine
 
 	Window::Window(const char* title, int width, int height) : width(width), height(height)
 	{
-		if (!glfwInit()) throw std::exception();
+		if (!glfwInit())
+		{
+			printf("glfw init failed!\n");
+			throw std::exception();
+		}
 
 		glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
 		glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
@@ -19,6 +23,7 @@ namespace engine
 		if (!window)
 		{
 			glfwTerminate();
+			printf("glfw failed to create a window!\n");
 			throw std::exception();
 		}
 
@@ -31,7 +36,11 @@ namespace engine
 		glfwSetKeyCallback(window, onWindowKeyboard);
 		glfwSetWindowFocusCallback(window, onWindowFocus);
 
-		if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) throw std::exception();
+		if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
+		{
+			printf("glad faild to init!\n");
+			throw std::exception();
+		}
 
 		instance = this;
 	}

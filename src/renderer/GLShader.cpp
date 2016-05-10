@@ -7,7 +7,13 @@ namespace engine
 	void GLShader::fromFile(const char* filename)
 	{
 		std::ifstream file(filename);
-		if (file.fail()) throw std::exception();
+
+		if (file.fail())
+		{
+			printf("cannot load shader: %s\n", filename);
+			throw std::exception();
+		}
+
 		std::stringstream stream;
 		stream << file.rdbuf();
 		fromStr(stream.str().c_str());
