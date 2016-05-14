@@ -1,48 +1,46 @@
 #include "math\Math.h"
-#include "extras\geometries\TorusKnotBufferGeometry.h"
+#include "extras\geometries\TorusKnot.h"
 
 namespace engine
 {
-	TorusKnotBufferGeometry::TorusKnotBufferGeometry(float radius, float tube, int radialSegments, int tubeSegments, float p, float q)
+	TorusKnot::TorusKnot(float radius, float tube, int uSegments, int vSegments, float p, float q)
 		: radius(radius)
 		, tube(tube)
-		, radialSegments(radialSegments)
-		, tubeSegments(tubeSegments)
+		, uSegments(uSegments)
+		, vSegments(vSegments)
 		, p(p)
 		, q(q)
 	{
-		int r1 = radialSegments + 1;
-		int t1 = tubeSegments + 1;
-		int vertexCount = r1 * t1;
-		int indexCount = radialSegments * tubeSegments * 6;
+		int u1 = uSegments + 1;
+		int v1 = vSegments + 1;
+		int vertexCount = u1 * v1;
 
 		std::vector<float> vertices, normals, uvs;
 		vertices.reserve(vertexCount * 3);
 		normals.reserve(vertexCount * 3);
 		uvs.reserve(vertexCount * 2);
-		indices.reserve(indexCount);
 
-		float stepU = 1.0f / radialSegments;
-		float stepV = 1.0f / tubeSegments;
-		float stepUAngle = stepU * Math::PI * 2 * p;
-		float stepVAngle = stepV * Math::PI * 2;
+		float stepU = 1.0f / uSegments;
+		float stepV = 1.0f / vSegments;
+		float stepAngleU = stepU * Math::PI * 2 * p;
+		float stepAngleV = stepV * Math::PI * 2;
 
 		float u = -stepU;
 		float v;
 
-		float uAngle = -stepUAngle;
-		float vAngle;
+		float angleU = -stepAngleU;
+		float angleV;
 
-		for (int i = 0; i < r1; ++i)
+		for (int i = 0; i < u1; ++i)
 		{
 			u += stepU;
 			v = -stepU;
 
-			uAngle += stepUAngle;
-			vAngle = -stepVAngle;
+			angleU += stepAngleU;
+			angleV = -stepAngleV;
 
-			Vector3 a = computePointOnCurve(uAngle);
-			Vector3 b = computePointOnCurve(uAngle + 0.01f);
+			Vector3 a = computePointOnCurve(angleU);
+			Vector3 b = computePointOnCurve(angleU + 0.01f);
 
 			Vector3 T = b - a;
 			Vector3 N = a + b;
@@ -52,13 +50,13 @@ namespace engine
 			B.normalize();
 			N.normalize();
 
-			for (int j = 0; j < t1; ++j)
+			for (int j = 0; j < v1; ++j)
 			{
 				v += stepV;
-				vAngle += stepVAngle;
+				angleV += stepAngleV;
 
-				float sv = sinf(vAngle);
-				float cv = cosf(vAngle);
+				float sv = sinf(angleV);
+				float cv = cosf(angleV);
 
 				// normal = sv dot N add cv dot -B;
 
@@ -79,18 +77,21 @@ namespace engine
 			}
 		}
 
-		unsigned int start = -t1;
+		indices.reserve(uSegments * vSegments * 6);
 
-		for (int i = 0; i < radialSegments; ++i)
+		unsigned int a = -1;
+		unsigned int b;
+		unsigned int c;
+		unsigned int d;
+
+		for (int i = 0; i < uSegments; ++i)
 		{
-			start += t1;
-
-			for (int j = 0; j < tubeSegments; ++j)
+			for (int j = 0; j < vSegments; ++j)
 			{
-				unsigned int a = start + j;
-				unsigned int b = a + t1;
-				unsigned int c = b + 1;
-				unsigned int d = a + 1;
+				++a;
+				b = a + v1;
+				c = b + 1;
+				d = a + 1;
 
 				indices.push_back(a);
 				indices.push_back(b);
@@ -99,6 +100,8 @@ namespace engine
 				indices.push_back(c);
 				indices.push_back(d);
 			}
+
+			++a;
 		}
 
 		addAttribute("position", new BufferAttribute(vertices, 3));
@@ -106,7 +109,7 @@ namespace engine
 		addAttribute("uv", new BufferAttribute(uvs, 2));
 	}
 
-	Vector3 TorusKnotBufferGeometry::computePointOnCurve(float angle)
+	Vector3 TorusKnot::computePointOnCurve(float angle)
 	{
 		float pa = p * angle;
 		float qa = q * angle;

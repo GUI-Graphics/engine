@@ -37,7 +37,7 @@ int main()
 	GLProgram program(vertexShader, fragmentShader);
 	program.compile();
 
-	TorusKnotBufferGeometry torusKnot;
+	TorusKnot torusKnot(8, 2, 120, 12);
 	glGenVertexArrays(1, &torusKnot.vao);
 	glBindVertexArray(torusKnot.vao);
 	torusKnot.updateAttributes();
@@ -62,7 +62,7 @@ int main()
 	GLuint diffuseLocation = glGetUniformLocation(program.program, "diffuse");
 
 	PerspectiveCamera camera(45.0f, 1.6f, 0.1f, 1000.0f);
-	camera.position(0, 10, 10);
+	camera.position(0, 30, 50);
 	camera.lookAt(Vector3(0, 0, 0));
 
 	Object3D scene;

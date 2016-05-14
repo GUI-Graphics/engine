@@ -7,14 +7,14 @@ namespace engine
 {
 	// @see: http://www.blackpawn.com/texts/pqtorus/ for more details
 
-	class TorusKnotBufferGeometry : public BufferGeometry
+	class TorusKnot : public BufferGeometry
 	{
 	public:
-		TorusKnotBufferGeometry(
+		TorusKnot(
 			float radius = 1, 
 			float tube = 0.3f, 
-			int   radialSegments = 120,
-			int   tubeSegments = 6,
+			int   uSegments = 120,
+			int   vSegments = 6,
 			float p = 2, 
 			float q = 3);
 
@@ -24,8 +24,8 @@ namespace engine
 	public:
 		float radius;
 		float tube;
-		int   radialSegments;
-		int   tubeSegments;
+		int   uSegments;
+		int   vSegments;
 		float p;
 		float q;
 	};

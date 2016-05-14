@@ -138,17 +138,8 @@
     <ClInclude Include="..\include\renderer\GLRenderer.h">
       <Filter>Header Files\renderer</Filter>
     </ClInclude>
-    <ClInclude Include="..\include\extras\geometries\BoxBufferGeometry.h">
-      <Filter>Header Files\extras\geometries</Filter>
-    </ClInclude>
     <ClInclude Include="..\src\extras\geometries\Mesh.h">
       <Filter>Header Files\core</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\extras\geometries\SphereBufferGeometry.h">
-      <Filter>Header Files\extras\geometries</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\extras\geometries\PlaneBufferGeometry.h">
-      <Filter>Header Files\extras\geometries</Filter>
     </ClInclude>
     <ClInclude Include="..\include\extras\helpers\BoxHelper.h">
       <Filter>Header Files\extras\helpers</Filter>
@@ -159,14 +150,32 @@
     <ClInclude Include="..\include\extras\helpers\MarchingCube.h">
       <Filter>Header Files\extras\helpers</Filter>
     </ClInclude>
-    <ClInclude Include="..\include\extras\geometries\TorusBufferGeometry.h">
-      <Filter>Header Files\extras\geometries</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\extras\geometries\TorusKnotBufferGeometry.h">
-      <Filter>Header Files\extras\geometries</Filter>
-    </ClInclude>
     <ClInclude Include="..\include\textures\Texture.h">
       <Filter>Header Files\textures</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\extras\geometries\Cube.h">
+      <Filter>Header Files\extras\geometries</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\extras\geometries\Box.h">
+      <Filter>Header Files\extras\geometries</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\extras\geometries\Cone.h">
+      <Filter>Header Files\extras\geometries</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\extras\geometries\Cylinder.h">
+      <Filter>Header Files\extras\geometries</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\extras\geometries\Plane.h">
+      <Filter>Header Files\extras\geometries</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\extras\geometries\Sphere.h">
+      <Filter>Header Files\extras\geometries</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\extras\geometries\Torus.h">
+      <Filter>Header Files\extras\geometries</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\extras\geometries\TorusKnot.h">
+      <Filter>Header Files\extras\geometries</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -203,29 +212,35 @@
     <ClCompile Include="..\src\renderer\GLRenderer.cpp">
       <Filter>Source Files\renderer</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\extras\geometries\BoxBufferGeometry.cpp">
-      <Filter>Source Files\extras\geometries</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\extras\geometries\SphereBufferGeometry.cpp">
-      <Filter>Source Files\extras\geometries</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\extras\geometries\PlaneBufferGeometry.cpp">
-      <Filter>Source Files\extras\geometries</Filter>
-    </ClCompile>
     <ClCompile Include="..\src\extras\helpers\GridHelper.cpp">
       <Filter>Source Files\extras\helpers</Filter>
     </ClCompile>
     <ClCompile Include="..\src\extras\helpers\MarchingCube.cpp">
       <Filter>Source Files\extras\helpers</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\extras\geometries\TorusBufferGeometry.cpp">
-      <Filter>Source Files\extras\geometries</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\extras\geometries\TorusKnotBufferGeometry.cpp">
-      <Filter>Source Files\extras\geometries</Filter>
-    </ClCompile>
     <ClCompile Include="..\src\textures\Texture.cpp">
       <Filter>Source Files\textures</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\extras\geometries\Cube.cpp">
+      <Filter>Source Files\extras\geometries</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\extras\geometries\Box.cpp">
+      <Filter>Source Files\extras\geometries</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\extras\geometries\Cylinder.cpp">
+      <Filter>Source Files\extras\geometries</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\extras\geometries\Plane.cpp">
+      <Filter>Source Files\extras\geometries</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\extras\geometries\Sphere.cpp">
+      <Filter>Source Files\extras\geometries</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\extras\geometries\Torus.cpp">
+      <Filter>Source Files\extras\geometries</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\extras\geometries\TorusKnot.cpp">
+      <Filter>Source Files\extras\geometries</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

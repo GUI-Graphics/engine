@@ -37,30 +37,30 @@ int main()
 	GLProgram program(vertexShader, fragmentShader);
 	program.compile();
 
-	Torus torus(3, 1);
-	glGenVertexArrays(1, &torus.vao);
-	glBindVertexArray(torus.vao);
-	torus.updateAttributes();
+	Sphere sphereA(5, 18, 9);
+	glGenVertexArrays(1, &sphereA.vao);
+	glBindVertexArray(sphereA.vao);
+	sphereA.updateAttributes();
 
-	glBindBuffer(GL_ARRAY_BUFFER, torus.getAttribute("position")->buffer);
+	glBindBuffer(GL_ARRAY_BUFFER, sphereA.getAttribute("position")->buffer);
 	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), 0);
 	glEnableVertexAttribArray(0);
 
-	Torus torusB(3, 1, 24, 12, 0, Math::PI);
-	glGenVertexArrays(1, &torusB.vao);
-	glBindVertexArray(torusB.vao);
-	torusB.updateAttributes();
+	Sphere sphereB(5, 18, 9, 0, Math::PI * 0.5f);
+	glGenVertexArrays(1, &sphereB.vao);
+	glBindVertexArray(sphereB.vao);
+	sphereB.updateAttributes();
 
-	glBindBuffer(GL_ARRAY_BUFFER, torusB.getAttribute("position")->buffer);
+	glBindBuffer(GL_ARRAY_BUFFER, sphereB.getAttribute("position")->buffer);
 	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), 0);
 	glEnableVertexAttribArray(0);
 
-	Torus torusC(3, 1, 24, 12, 0, Math::PI, 0, Math::PI);
-	glGenVertexArrays(1, &torusC.vao);
-	glBindVertexArray(torusC.vao);
-	torusC.updateAttributes();
+	Sphere sphereC(5, 18, 9, 0, Math::PI * 0.5f, 0, Math::PI * 0.75f);
+	glGenVertexArrays(1, &sphereC.vao);
+	glBindVertexArray(sphereC.vao);
+	sphereC.updateAttributes();
 
-	glBindBuffer(GL_ARRAY_BUFFER, torusC.getAttribute("position")->buffer);
+	glBindBuffer(GL_ARRAY_BUFFER, sphereC.getAttribute("position")->buffer);
 	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), 0);
 	glEnableVertexAttribArray(0);
 
@@ -80,28 +80,27 @@ int main()
 	GLuint diffuseLocation = glGetUniformLocation(program.program, "diffuse");
 
 	PerspectiveCamera camera(45.0f, 1.6f, 0.1f, 1000.0f);
-	camera.position(0, 10, 40);
+	camera.position(0, 10, 30);
 	camera.lookAt(Vector3(0, 0, 0));
 
 	Object3D scene;
+	GLRenderer renderer;
 
 	Object3D* a = new Object3D();
-	a->position(-8, 0, 8);
+	a->position(-5, 0, 5);
 	scene.add(a);
 
 	Object3D* b = new Object3D();
-	b->position(8, 0, 8);
+	b->position(5, 0, 5);
 	scene.add(b);
 
 	Object3D* c = new Object3D();
-	c->position(8, 0, -8);
+	c->position(5, 0, -5);
 	scene.add(c);
 
-	GLRenderer renderer;
 	OrbitControl control(camera, window);
 
 	glEnable(GL_DEPTH_TEST);
-	glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 	glClearColor(0.5f, 0.5f, 0.5f, 1.0f);
 
 	while (window.active())
@@ -111,6 +110,7 @@ int main()
 		renderer.render(scene, camera);
 
 		glUniform3f(diffuseLocation, 0.45f, 0.45f, 0.45f);
+		glUniformMatrix4fv(modelMatrixLocation, 1, GL_TRUE, a->matrix.elements);
 		glUniformMatrix4fv(viewMatrixLocation, 1, GL_TRUE, camera.matrixWorldInverse.elements);
 		glUniformMatrix4fv(projectMatrixLocation, 1, GL_TRUE, camera.projectMatrix.elements);
 
@@ -118,21 +118,21 @@ int main()
 		glDrawArrays(GL_LINES, 0, (GLsizei)grid.getAttribute("position")->array.size() / 2);
 
 		glUniform3f(diffuseLocation, 0.35f, 0.35f, 0.35f);
+		glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 
-		glBindVertexArray(torus.vao);
-		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, torus.index);
-		glUniformMatrix4fv(modelMatrixLocation, 1, GL_TRUE, a->matrix.elements);
-		glDrawElements(GL_TRIANGLES, (GLsizei)torus.indices.size(), GL_UNSIGNED_INT, 0);
+		glBindVertexArray(sphereA.vao);
+		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, sphereA.index);
+		glDrawElements(GL_TRIANGLES, (GLsizei)sphereA.indices.size(), GL_UNSIGNED_INT, 0);
 
-		glBindVertexArray(torusB.vao);
-		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, torusB.index);
 		glUniformMatrix4fv(modelMatrixLocation, 1, GL_TRUE, b->matrix.elements);
-		glDrawElements(GL_TRIANGLES, (GLsizei)torusB.indices.size(), GL_UNSIGNED_INT, 0);
+		glBindVertexArray(sphereB.vao);
+		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, sphereB.index);
+		glDrawElements(GL_TRIANGLES, (GLsizei)sphereB.indices.size(), GL_UNSIGNED_INT, 0);
 
-		glBindVertexArray(torusC.vao);
-		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, torusC.index);
 		glUniformMatrix4fv(modelMatrixLocation, 1, GL_TRUE, c->matrix.elements);
-		glDrawElements(GL_TRIANGLES, (GLsizei)torusC.indices.size(), GL_UNSIGNED_INT, 0);
+		glBindVertexArray(sphereC.vao);
+		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, sphereC.index);
+		glDrawElements(GL_TRIANGLES, (GLsizei)sphereC.indices.size(), GL_UNSIGNED_INT, 0);
 
 		window.refresh();
 	}

@@ -12,11 +12,12 @@
 #include <renderer\GLProgram.h>
 #include <renderer\GLRenderer.h>
 
-#include <extras\geometries\BoxBufferGeometry.h>
-#include <extras\geometries\SphereBufferGeometry.h>
-#include <extras\geometries\PlaneBufferGeometry.h>
-#include <extras\geometries\TorusBufferGeometry.h>
-#include <extras\geometries\TorusKnotBufferGeometry.h>
+#include <extras\geometries\Box.h>
+#include <extras\geometries\Cube.h>
+#include <extras\geometries\Sphere.h>
+#include <extras\geometries\Plane.h>
+#include <extras\geometries\Torus.h>
+#include <extras\geometries\TorusKnot.h>
 
 #include <extras\helpers\BoxHelper.h>
 #include <extras\helpers\GridHelper.h>
