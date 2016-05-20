@@ -13,4 +13,5 @@ What I really hope now is there anyone can help me to correct this readme file, 
 <img src="./screenshot/sphere.png" width="400">
 <img src="./screenshot/torus.png" width="400">
 <img src="./screenshot/torusknot.png" width="400">
+<img src="./screenshot/simple-light.png" width="400">
 

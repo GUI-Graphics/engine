@@ -64,7 +64,7 @@ namespace engine
 				vertices.push_back(r * cu);
 
 				normals.push_back(-su * cv);
-				normals.push_back(sv);
+				normals.push_back(-sv);
 				normals.push_back(-cu * cv);
 
 				uvs.push_back(u);
@@ -81,7 +81,6 @@ namespace engine
 
 		for (int i = 0; i < vSegments; ++i)
 		{
-
 			for (int j = 0; j < uSegments; ++j)
 			{
 				++a;
