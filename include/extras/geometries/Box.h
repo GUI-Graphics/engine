@@ -7,11 +7,22 @@ namespace engine
 	class Box : public BufferGeometry
 	{
 	public:
-		Box(float width = 1, float height = 1, float depth = 1);
+		Box() : width(1), height(1), depth(1)
+		{
+			init();
+		}
+
+		Box(float width, float height, float depth) : width(width), height(height), depth(depth)
+		{
+			init();
+		}
 
 	public:
 		float width;
 		float height;
 		float depth;
+
+	private:
+		void init();
 	};
 }

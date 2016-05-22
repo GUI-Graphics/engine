@@ -2,7 +2,7 @@
 
 namespace engine
 {
-	Box::Box(float width, float height, float depth) : width(width), height(height), depth(depth)
+	void Box::init()
 	{
 		float px = 0.5f * width;
 		float nx = -px;

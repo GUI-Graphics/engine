@@ -153,9 +153,6 @@
     <ClInclude Include="..\include\textures\Texture.h">
       <Filter>Header Files\textures</Filter>
     </ClInclude>
-    <ClInclude Include="..\include\extras\geometries\Cube.h">
-      <Filter>Header Files\extras\geometries</Filter>
-    </ClInclude>
     <ClInclude Include="..\include\extras\geometries\Box.h">
       <Filter>Header Files\extras\geometries</Filter>
     </ClInclude>
@@ -220,9 +217,6 @@
     </ClCompile>
     <ClCompile Include="..\src\textures\Texture.cpp">
       <Filter>Source Files\textures</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\extras\geometries\Cube.cpp">
-      <Filter>Source Files\extras\geometries</Filter>
     </ClCompile>
     <ClCompile Include="..\src\extras\geometries\Box.cpp">
       <Filter>Source Files\extras\geometries</Filter>

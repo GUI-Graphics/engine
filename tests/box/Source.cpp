@@ -37,7 +37,7 @@ int main()
 	GLProgram program(vertexShader, fragmentShader);
 	program.compile();
 
-	Cube cube;
+	Box cube;
 	glGenVertexArrays(1, &cube.vao);
 	glBindVertexArray(cube.vao);
 	cube.updateAttributes();

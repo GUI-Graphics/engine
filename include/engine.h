@@ -13,7 +13,6 @@
 #include <renderer\GLRenderer.h>
 
 #include <extras\geometries\Box.h>
-#include <extras\geometries\Cube.h>
 #include <extras\geometries\Sphere.h>
 #include <extras\geometries\Plane.h>
 #include <extras\geometries\Torus.h>
