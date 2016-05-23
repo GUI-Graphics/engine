@@ -25,6 +25,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "simple-light", "tests\simpl
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cubemap", "tests\cubemap\cubemap.vcxproj", "{8000B409-2687-4911-B200-9E3BEB8C639B}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "environment-map", "tests\environment-map\environment-map.vcxproj", "{8B001630-5B88-4F96-8DA8-2C51C0979F98}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -113,6 +115,14 @@ Global
 		{8000B409-2687-4911-B200-9E3BEB8C639B}.Release|x64.Build.0 = Release|x64
 		{8000B409-2687-4911-B200-9E3BEB8C639B}.Release|x86.ActiveCfg = Release|Win32
 		{8000B409-2687-4911-B200-9E3BEB8C639B}.Release|x86.Build.0 = Release|Win32
+		{8B001630-5B88-4F96-8DA8-2C51C0979F98}.Debug|x64.ActiveCfg = Debug|x64
+		{8B001630-5B88-4F96-8DA8-2C51C0979F98}.Debug|x64.Build.0 = Debug|x64
+		{8B001630-5B88-4F96-8DA8-2C51C0979F98}.Debug|x86.ActiveCfg = Debug|Win32
+		{8B001630-5B88-4F96-8DA8-2C51C0979F98}.Debug|x86.Build.0 = Debug|Win32
+		{8B001630-5B88-4F96-8DA8-2C51C0979F98}.Release|x64.ActiveCfg = Release|x64
+		{8B001630-5B88-4F96-8DA8-2C51C0979F98}.Release|x64.Build.0 = Release|x64
+		{8B001630-5B88-4F96-8DA8-2C51C0979F98}.Release|x86.ActiveCfg = Release|Win32
+		{8B001630-5B88-4F96-8DA8-2C51C0979F98}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -127,5 +137,6 @@ Global
 		{49E3388E-26D6-4FDF-9E45-A2D59914CA8F} = {30F386CF-00A1-4855-AD93-299ED0E6538C}
 		{138B7E6A-C929-4CC6-BEB2-97026DE452D0} = {30F386CF-00A1-4855-AD93-299ED0E6538C}
 		{8000B409-2687-4911-B200-9E3BEB8C639B} = {30F386CF-00A1-4855-AD93-299ED0E6538C}
+		{8B001630-5B88-4F96-8DA8-2C51C0979F98} = {30F386CF-00A1-4855-AD93-299ED0E6538C}
 	EndGlobalSection
 EndGlobal
