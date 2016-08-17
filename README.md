@@ -1,8 +1,6 @@
 # engine
 basic opengl demo
 
-What I really hope now is there anyone can help me to correct this readme file, because my english is astonish poor!
-
 #screenshot
 <img src="./screenshot/box.png" width="200">
 <img src="./screenshot/metaball-2d.png" width="200">
